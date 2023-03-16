@@ -1,0 +1,97 @@
+.star_rating {
+  width: var(--contentWidth);
+  margin: 90px 100px 0 100px;
+  height: 800px;
+}
+
+.star_rating h1 {
+  font-size: var(--SemiBigFontSize);
+  color: var(--firstColor);
+  text-align: center;
+  margin-top: 50px auto;
+  position: relative;
+}
+
+.star_rating h1::before {
+  content: "";
+  display: block;
+  width: 700px;
+  height: 2px;
+  background: var(--firstColor);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.star_rating h1::after {
+  content: "";
+  display: block;
+  width: 700px;
+  height: 2px;
+  background: var(--firstColor);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.star_rating p {
+  font-size: var(--SmallFontSize);
+  color: var(--seventhColor);
+  text-align: center;
+  margin-top: 5px;
+}
+
+.rating {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating textarea {
+  width: 620px;
+  height: 335px;
+  border-radius: 40px;
+  padding: 20px;
+  font-size: var(--SmallFontSize);
+}
+
+.stars {
+  width: 560px;
+  text-align: center;
+}
+
+.star {
+  width: 90px;
+  height: 90px;
+  color: var(--seventhColor);
+  opacity: 50%;
+}
+
+.star-hover {
+  color: orange;
+  width: 90px;
+  height: 90px;
+}
+
+.rating .btn {
+  margin-top: 1.5rem;
+  width: 190px;
+  height: 55px;
+  border-radius: 30px;
+  border: 0px;
+  background: linear-gradient(0.2turn, var(--firstColor), var(--fourthColor));
+  color: var(--secondColor);
+  font-size: var(--MediumFontSize);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rating .btn:hover {
+  color: #ffffff;
+  box-shadow: 10px -5px 20px 0 var(--fourthColor),
+    -10px 1px 20px 0 var(--secondColor);
+}

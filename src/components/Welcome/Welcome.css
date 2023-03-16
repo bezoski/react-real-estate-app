@@ -1,0 +1,57 @@
+.welcome {
+  width: var(--contentWidth);
+  height: 630px;
+  margin: 40px 100px 0 100px;
+  background-image: url(/./src/assets/welcome-background.jpg);
+  background-size: cover;
+  border-top-left-radius: 150px 150px;
+  border-bottom-right-radius: 330px 330px;
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.25;
+  width: var(--contentWidth);
+  height: 630px;
+  border-top-left-radius: 150px 150px;
+  border-bottom-right-radius: 330px 330px;
+}
+.welcome p {
+  font-size: var(--SecondBigFontSize);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  float: right;
+  margin: 15% 10%;
+  color: var(--thirdColor);
+}
+
+#find {
+  color: var(--secondColor);
+  text-decoration: underline;
+}
+
+#your {
+  color: #ffffff;
+}
+
+.welcome .btn {
+  float: left;
+  width: 195px;
+  height: 50px;
+  border-radius: 30px;
+  border: 0px;
+  background: linear-gradient(0.2turn, var(--fourthColor), var(--firstColor));
+  color: var(--secondColor);
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.welcome .btn:hover {
+  color: #ffffff;
+  box-shadow: 10px -5px 20px 0 var(--secondColor),
+    -10px 1px 20px 0 var(--fourthColor);
+}

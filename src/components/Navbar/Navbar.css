@@ -1,0 +1,34 @@
+.NavBar {
+  margin: 20px 100px 0 100px;
+  height: 150px;
+  width: var(--contentWidth);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding-top: 70px;
+  padding-right: 10px;
+}
+.navbar li {
+  font-size: var(--MediumFontSize);
+  display: inline-block;
+  margin-left: 73px;
+}
+
+.logo img {
+  padding-top: 10px;
+  width: 225px;
+  height: 140px;
+}
+
+.link-active {
+  color: var(--secondColor);
+  text-decoration: none;
+}
+
+.link {
+  color: var(--thirdColor);
+  text-decoration: none;
+}

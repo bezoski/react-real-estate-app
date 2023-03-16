@@ -1,0 +1,32 @@
+.banner {
+  width: var(--contentWidth);
+  height: 365px;
+  margin: 90px 100px 50px 100px;
+  background: url("/./src/assets/offers-baner.jpg");
+  background-size: cover;
+  background-position: 50% 55%;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.2;
+  width: var(--contentWidth);
+  height: 365px;
+}
+
+.banner h1 {
+  text-align: center;
+  padding-top: 5%;
+  text-transform: uppercase;
+  font-size: var(--BigFontSize);
+  color: var(--secondColor);
+  z-index: 1;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 span {
+  color: #ffffff;
+}

@@ -1,0 +1,83 @@
+.contact {
+  width: var(--contentWidth);
+  height: 800px;
+  margin: 90px 100px 10px 100px;
+}
+
+.header {
+  text-align: center;
+  font-size: var(--SemiBigFontSize);
+  color: var(--firstColor);
+}
+
+.forms {
+  font-size: var(--SmallFontSize);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.forms .email {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.message {
+  display: block;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+#name,
+#email {
+  width: 560px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+#message {
+  width: 1430px;
+  height: 380px;
+  border-radius: 10px;
+}
+
+.name,
+.message {
+  margin-left: 145px;
+}
+
+.email {
+  margin-left: 18%;
+}
+
+#name,
+#email,
+#message {
+  padding: 15px;
+}
+
+#value {
+  margin-top: 1rem;
+  margin-left: 145px;
+  color: red;
+}
+
+.forms .btn {
+  position: absolute;
+  margin-top: 35.3rem;
+  margin-left: 71.5%;
+  width: 190px;
+  height: 55px;
+  border-radius: 30px;
+  border: 0px;
+  background: linear-gradient(0.1turn, var(--firstColor), var(--fourthColor));
+  color: #ffffff;
+  font-size: var(--MediumFontSize);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forms .btn:hover {
+  color: var(--secondColor);
+  box-shadow: 10px -5px 20px 0 var(--fourthColor),
+    -10px 1px 20px 0 var(--secondColor);
+}

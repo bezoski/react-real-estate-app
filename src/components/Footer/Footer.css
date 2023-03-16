@@ -1,0 +1,36 @@
+.footer {
+  width: auto;
+  height: 230px;
+  background: var(--seventhColor);
+  text-align: center;
+}
+
+.footer h1 {
+  padding-top: 60px;
+  color: #ffffff;
+  font-size: var(--SmallFontSize);
+}
+.footer .links {
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.footer .links ul {
+  list-style: none;
+}
+
+.footer .links li {
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer .link {
+  color: #ffffff;
+}

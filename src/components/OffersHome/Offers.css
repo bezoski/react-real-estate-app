@@ -1,0 +1,118 @@
+.offers {
+  width: var(--contentWidth);
+  height: 850px;
+  margin: 45px 100px 0 100px; /*45px auto 0 auto*/
+  display: flex;
+  flex-direction: column;
+}
+
+.offers h1 {
+  font-size: var(--SemiBigFontSize);
+  color: var(--firstColor);
+  text-align: center;
+  position: relative;
+  margin-top: 0;
+}
+
+.offers h1::before {
+  content: "";
+  display: block;
+  width: 700px;
+  height: 2px;
+  background: var(--firstColor);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.offers h1::after {
+  content: "";
+  display: block;
+  width: 700px;
+  height: 2px;
+  background: var(--firstColor);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.offers p {
+  font-size: var(--SmallFontSize);
+  color: var(--seventhColor);
+  text-align: center;
+  margin-top: 5px;
+}
+
+.box-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+.box {
+  width: 398px;
+  height: 630px;
+  margin: 50px;
+}
+
+.box1 {
+  border-radius: 40px;
+  background: url("/./src/assets/house.jpg");
+  background-size: cover;
+  background-position: 40% 50%;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.1;
+  height: 630px;
+  width: 398px;
+  border-radius: 40px;
+}
+
+.box2 {
+  border-radius: 40px;
+  background: url("/./src/assets/office.jpg");
+  background-size: cover;
+  background-position: 35% 50%;
+}
+
+.box3 {
+  border-radius: 40px;
+  background: url("/./src/assets/vacant_land.jpg");
+  background-position: 45% 50%;
+  background-size: cover;
+}
+
+.content h2 {
+  font-size: var(--BigFontSize);
+  position: relative;
+  z-index: 1;
+  padding: 8px;
+  margin-top: 110%;
+}
+
+.box2 .content h2,
+.box3 .content h2 {
+  margin-top: 130%;
+}
+
+.box1 span {
+  color: var(--firstColor);
+}
+.box1 h2 {
+  color: #ffffff;
+}
+
+.box2 h2 {
+  color: var(--fourthColor);
+}
+
+.box3 h2 {
+  color: var(--secondColor);
+}

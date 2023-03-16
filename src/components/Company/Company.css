@@ -1,0 +1,52 @@
+.company {
+  width: var(--contentWidth);
+  height: 620px;
+  margin: 90px 100px 0 100px;
+}
+
+.company-container {
+  margin-top: 20px;
+}
+.company_img {
+  height: 580px;
+  object-fit: contain;
+  border-radius: 1.8rem;
+}
+
+.company_element {
+  float: left;
+  width: 50%;
+}
+
+.company_info {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.company_info h1 {
+  font-size: var(--BigFontSize);
+  color: var(--firstColor);
+  padding-bottom: 3.2rem;
+}
+
+.company_info P {
+  font-size: var(--MediumFontSize);
+}
+
+.company_info .btn {
+  margin-top: 1.5rem;
+  width: 240px;
+  height: 55px;
+  border-radius: 30px;
+  border: 0px;
+  background: linear-gradient(0.2turn, var(--firstColor), var(--fourthColor));
+  color: var(--secondColor);
+  font-size: var(--MediumFontSize);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.company_info .btn:hover {
+  color: #ffffff;
+  box-shadow: 10px -5px 20px 0 var(--fourthColor),
+    -10px 1px 20px 0 var(--secondColor);
+}

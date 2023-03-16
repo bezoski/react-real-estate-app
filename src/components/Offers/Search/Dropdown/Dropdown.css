@@ -1,0 +1,72 @@
+.dropdown {
+  width: 100%;
+  max-width: 296px;
+  cursor: pointer;
+}
+
+.dropdown-btn {
+  border: 0;
+  padding: 10px 15px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  cursor: pointer;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.dropdown-icon-primary {
+  font-size: 2rem;
+  color: var(--firstColor);
+}
+
+.dropdown-icon-secondary {
+  font-size: 2rem;
+  color: var(--firstColor);
+  margin-left: auto;
+}
+
+.dropdown-menu {
+  padding: 1rem 1.5rem;
+  font-size: var(--SmallFontSize);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  list-style: none;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.menu-section {
+  position: relative;
+}
+
+.menu-section .dropdown-btn .content {
+  margin-left: 0.5rem;
+}
+
+.menu-section .dropdown-btn .content span {
+  color: var(--thirdColor);
+  font-size: var(--SmallFontSize);
+}
+
+.menu-section .dropdown-btn .content .description {
+  color: var(--seventhColor);
+  font-size: 1rem;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.menu:hover {
+  color: var(--firstColor);
+}
