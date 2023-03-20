@@ -3,7 +3,7 @@ import "./Offers.css";
 
 const Offers = () => {
   return (
-    <section className="offers">
+    <section className="offers fade-bottom">
       <h1>Offers</h1>
       <p>What we offer</p>
       <div className="box-container">

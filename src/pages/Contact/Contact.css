@@ -1,7 +1,9 @@
 .contact {
-  width: var(--contentWidth);
-  height: 800px;
-  margin: 90px 100px 10px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
 }
 
 .header {
@@ -11,73 +13,98 @@
 }
 
 .forms {
-  font-size: var(--SmallFontSize);
   display: flex;
-  flex-wrap: wrap;
-}
-
-.forms .email {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.message {
-  display: block;
-  margin-top: 2rem;
-  width: 100%;
-}
-
-#name,
-#email {
-  width: 560px;
-  height: 70px;
-  border-radius: 10px;
-}
-
-#message {
-  width: 1430px;
-  height: 380px;
-  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .name,
+.email,
 .message {
-  margin-left: 145px;
+  display: flex;
+  flex-direction: column;
 }
 
-.email {
-  margin-left: 18%;
-}
-
+#message,
 #name,
-#email,
+#email {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  min-width: 300px;
+  width: 540px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+#name_label,
+#email_label,
+#message_label {
+  font-size: var(--SmallFontSize);
+}
 #message {
-  padding: 15px;
+  height: 150px;
+}
+
+.forms-btn {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  width: 190px;
+  height: 55px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(0.1turn, var(--firstColor), var(--fourthColor));
+  font-size: var(--MediumFontSize);
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.forms-btn:hover {
+  color: var(--secondColor);
+  box-shadow: 10px -5px 20px 0 var(--fourthColor),
+    -10px 1px 20px 0 var(--secondColor);
 }
 
 #value {
   margin-top: 1rem;
-  margin-left: 145px;
   color: red;
 }
 
-.forms .btn {
-  position: absolute;
-  margin-top: 35.3rem;
-  margin-left: 71.5%;
-  width: 190px;
-  height: 55px;
-  border-radius: 30px;
-  border: 0px;
-  background: linear-gradient(0.1turn, var(--firstColor), var(--fourthColor));
-  color: #ffffff;
-  font-size: var(--MediumFontSize);
-  text-decoration: none;
-  cursor: pointer;
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
-.forms .btn:hover {
-  color: var(--secondColor);
-  box-shadow: 10px -5px 20px 0 var(--fourthColor),
-    -10px 1px 20px 0 var(--secondColor);
+@media screen and (max-width: 1024px) {
+  #message,
+  #name,
+  #email {
+    font-size: var(--SemiSmallFontSize);
+    width: auto;
+  }
+
+  #name_label,
+  #email_label,
+  #message_label {
+    font-size: var(--SemiSmallFontSize);
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    font-size: var(--SemiMediumFontSize);
+  }
+  .forms-btn {
+    width: auto;
+    height: auto;
+    font-size: var(--SemiMediumFontSize);
+  }
 }

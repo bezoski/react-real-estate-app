@@ -30,14 +30,14 @@
 }
 
 .element .type {
-  border-radius: 9999px;
+  border-radius: 30px;
   color: #fff;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 .element .country {
   background-color: var(--fifthColor);
-  border-radius: 9999px;
+  border-radius: 30px;
   color: #fff;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -54,4 +54,18 @@
 .rent {
   color: var(--seventhColor);
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .offers-content {
+    width: 430px;
+    height: 380px;
+  }
+  .offers-image {
+    width: 400px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 480px) {
 }

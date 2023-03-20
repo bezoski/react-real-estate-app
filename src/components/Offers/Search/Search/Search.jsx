@@ -8,7 +8,7 @@ import { PropertyContext } from "../PropertyContext/PropertyContext";
 const Search = () => {
   const { handleClick } = useContext(PropertyContext);
   return (
-    <div className="search">
+    <div className="search fade-bottom ">
       <CountryDropdown />
       <PropertyDropdown />
       <PriceRangeDropdown />

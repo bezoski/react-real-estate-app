@@ -47,11 +47,13 @@ const Contact = () => {
     }
   };
   return (
-    <section className="contact">
+    <section className="contact fade-bottom">
       <h1 className="header">Contact Us</h1>
       <form className="forms" onSubmit={handleSubmit}>
         <div className="name">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name" id="name_label">
+            Name
+          </label>
           <br />
           <input
             type="text"
@@ -62,7 +64,9 @@ const Contact = () => {
           />
         </div>
         <div className="email">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" id="email_label">
+            Email
+          </label>
           <br />
           <input
             type="email"
@@ -73,7 +77,9 @@ const Contact = () => {
           />
         </div>
         <div className="message">
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message" id="message_label">
+            Message
+          </label>
           <br />
           <textarea
             id="message"
@@ -83,7 +89,7 @@ const Contact = () => {
           ></textarea>
         </div>
         <p id="value"></p>
-        <button className="btn" type="submit">
+        <button className="forms-btn" type="submit">
           Send
         </button>
       </form>

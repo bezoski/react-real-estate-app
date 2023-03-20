@@ -102,7 +102,7 @@
   margin-top: 130%;
 }
 
-.box1 span {
+.box1 .content span {
   color: var(--firstColor);
 }
 .box1 h2 {

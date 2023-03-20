@@ -45,3 +45,20 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .property_list {
+    width: auto;
+    margin: 20px 10px;
+  }
+
+  .offer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .offer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

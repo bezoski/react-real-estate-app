@@ -1,32 +1,56 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <section className="footer fade-bottom">
       <h1>Copyright © 2023 Welcome Home</h1>
       <div className="links">
         <ul>
           <li>
-            <NavLink to="/" className="link">
+            <Link
+              to="/"
+              onClick={() => {
+                window.scrollTo({ top: 0 });
+              }}
+              className="link"
+            >
               Home
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink to="/offers" className="link">
+            <Link
+              to="/offers"
+              onClick={() => {
+                window.scrollTo({ top: 0 });
+              }}
+              className="link"
+            >
               Offers
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink to="/about" className="link">
+            <Link
+              to="/about"
+              onClick={() => {
+                window.scrollTo({ top: 0 });
+              }}
+              className="link"
+            >
               About
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink to="/contact" className="link">
+            <Link
+              to="/contact"
+              onClick={() => {
+                window.scrollTo({ top: 0 });
+              }}
+              className="link"
+            >
               Contact Us
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>

@@ -20,26 +20,29 @@ const PriceRangeDropdown = () => {
       value: "Price range (any)",
     },
     {
-      value: "80000 - 140000",
+      value: "0 - 60000",
     },
     {
-      value: "140000 - 200000",
+      value: "60000 - 120000",
     },
     {
-      value: "200000 - 260000",
+      value: "120000 - 180000",
     },
     {
-      value: "260000 - 320000",
+      value: "180000 - 240000",
     },
     {
-      value: "320000 - 380000",
+      value: "240000 - 300000",
     },
     {
-      value: "380000 - 440000",
+      value: "300000 - 360000",
+    },
+    {
+      value: "360000 - 420000",
     },
   ];
   return (
-    <Menu as="div" className="menu-section dropdown ">
+    <Menu as="div" className="menu-section dropdown fade-bottom">
       <Menu.Button onClick={() => setIsOpen(!isOpen)} className="dropdown-btn ">
         <RiWallet3Line className="dropdown-icon-primary" />
         <div className="content">

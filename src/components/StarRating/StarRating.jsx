@@ -21,7 +21,7 @@ const StarRating = () => {
     setRating(null);
   };
   return (
-    <section className="star_rating">
+    <section className="star_rating fade-bottom">
       <h1>Rating</h1>
       <p>Give us a rating</p>
       <div className="rating">

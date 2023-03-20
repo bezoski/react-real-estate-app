@@ -24,7 +24,7 @@ const Property = ({ property }) => {
     backgroundColor = "#3ae055";
   }
   return (
-    <div className="offers-content">
+    <div className="offers-content ">
       <img className="offers-image" src={image} alt="" />
       <div className="element ">
         <div style={{ backgroundColor }} className="type">

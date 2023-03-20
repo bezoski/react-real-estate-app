@@ -4,7 +4,7 @@ import "./Welcome.css";
 
 const Welcome = () => {
   return (
-    <section className="welcome">
+    <section className="welcome fade-bottom">
       <p>
         <span id="find">find </span>
         <span id="your">your </span>

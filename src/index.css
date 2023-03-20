@@ -8,12 +8,15 @@
   --fifthColor: #417a1f;
   --sixthColor: #e61787;
   --seventhColor: #808080;
+  --SharedLayoutColor: #1b2430;
   --contentWidth: 108rem;
   --SecondBigFontSize: 4.5rem;
   --BigFontSize: 3.5rem;
   --SemiBigFontSize: 3rem;
   --MediumFontSize: 1.8rem;
+  --SemiMediumFontSize: 1.4rem;
   --SmallFontSize: 1.1rem;
+  --SemiSmallFontSize: 0.9rem;
 }
 
 * {
@@ -29,8 +32,6 @@
 
 ::-webkit-scrollbar-track {
   background: linear-gradient(var(--firstColor), var(--fourthColor));
-  border-radius: 1rem;
-  margin-block: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--secondColor);
@@ -39,4 +40,19 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--thirdColor);
+}
+
+.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

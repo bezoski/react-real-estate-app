@@ -1,34 +1,108 @@
-.NavBar {
-  margin: 20px 100px 0 100px;
-  height: 150px;
-  width: var(--contentWidth);
+nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  background: var(--SharedLayoutColor);
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
-.navbar ul {
-  list-style-type: none;
-  padding-top: 70px;
-  padding-right: 10px;
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.navbar li {
-  font-size: var(--MediumFontSize);
-  display: inline-block;
-  margin-left: 73px;
-}
-
-.logo img {
-  padding-top: 10px;
-  width: 225px;
-  height: 140px;
-}
-
-.link-active {
-  color: var(--secondColor);
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
   text-decoration: none;
+  font-size: var(--SemiMediumFontSize);
 }
 
 .link {
   color: var(--thirdColor);
   text-decoration: none;
+}
+
+.link:hover {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.link:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #ffffff;
+  position: absolute;
+  bottom: -4px;
+  transition: 0.3s ease-in-out;
+  left: 20px;
+}
+
+.link-active {
+  color: var(--secondColor);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.link-active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: var(--secondColor);
+  position: absolute;
+  bottom: -4px;
+  transition: 0.3s ease-in-out;
+  left: 20px;
+}
+.logo img {
+  width: 170px;
+  height: 90px;
+  margin-left: 20px;
+}
+
+#mobile {
+  display: none;
+}
+#mobile i {
+  color: var(--thirdColor);
+}
+
+@media screen and (max-width: 1024px) {
+  #navbar {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 135px;
+    z-index: 3;
+    right: -300px;
+    width: 40%;
+    height: 100vh;
+    background: var(--seventhColor);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    padding: 40px 0 0 10px;
+  }
+
+  #navbar.nav_active {
+    right: 0px;
+    display: flex;
+    transition: 0.3s ease-in-out;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #mobile i {
+    font-size: var(--SemiMediumFontSize);
+    cursor: pointer;
+  }
 }

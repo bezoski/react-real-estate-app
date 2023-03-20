@@ -5,7 +5,7 @@ import Offers from "./pages/Offers";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import SharedLayout from "./pages/SharedLayout";
-import PropertyDetails from "./pages/PropertyDetails";
+import PropertyDetails from "./pages/PropertyDetails/PropertyDetails";
 
 const App = () => {
   return (

@@ -13,7 +13,7 @@ const PropertyDropdown = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <Menu as="div" className="menu-section dropdown ">
+    <Menu as="div" className="menu-section dropdown  fade-bottom">
       <Menu.Button onClick={() => setIsOpen(!isOpen)} className="dropdown-btn ">
         <RiHome5Line className="dropdown-icon-primary" />
         <div className="content">

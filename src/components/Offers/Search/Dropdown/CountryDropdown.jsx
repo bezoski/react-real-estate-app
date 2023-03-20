@@ -13,7 +13,7 @@ const CountryDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Menu as="div" className="menu-section dropdown ">
+    <Menu as="div" className="menu-section dropdown fade-bottom">
       <Menu.Button onClick={() => setIsOpen(!isOpen)} className="dropdown-btn ">
         <RiMapPinLine className="dropdown-icon-primary" />
         <div className="content">

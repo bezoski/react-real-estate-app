@@ -20,9 +20,9 @@ const PropertyList = () => {
     return <div className="loading_message">Sorry, nothing found</div>;
   }
   return (
-    <section className="property_list">
-      <div className="container">
-        <div className="offer">
+    <section className="property_list fade-bottom ">
+      <div className="container ">
+        <div className="offer ">
           {realEstate.map((estate, index) => {
             return (
               <Link to={`/property/${estate.id}`} className="link" key={index}>

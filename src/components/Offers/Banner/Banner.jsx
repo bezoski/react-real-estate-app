@@ -2,7 +2,7 @@ import React from "react";
 import "./Banner.css";
 const Banner = () => {
   return (
-    <section className="banner">
+    <section className="banner fade-bottom">
       <h1>
         <span>your </span>place <br />
         is waiting for you

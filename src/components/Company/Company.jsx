@@ -5,7 +5,7 @@ import CompanyImg from "../../assets/company.jpg";
 
 const Company = () => {
   return (
-    <section className="company">
+    <section className="company fade-bottom">
       <div className="company-container">
         <img
           src={CompanyImg}
