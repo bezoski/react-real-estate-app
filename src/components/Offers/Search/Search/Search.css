@@ -16,16 +16,16 @@
   border: 0px;
   margin-top: 7px;
   text-align: center;
-  background: linear-gradient(0.2turn, var(--firstColor), var(--fourthColor));
-  color: var(--secondColor);
+  background: linear-gradient(0.2turn, var(--headerColor), var(--thirdColor));
+  color: var(--mainColor);
   font-size: var(--MediumFontSize);
   text-decoration: none;
   cursor: pointer;
 }
 .search .btn:hover {
   color: #ffffff;
-  box-shadow: 10px -5px 20px 0 var(--fourthColor),
-    -10px 1px 20px 0 var(--secondColor);
+  box-shadow: 10px -5px 20px 0 var(--thirdColor),
+    -10px 1px 20px 0 var(--mainColor);
 }
 
 @media (max-width: 1024px) {
@@ -43,5 +43,16 @@
     width: 120px;
     height: auto;
     font-size: var(--SemiMediumFontSize);
+    margin-left: 45px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search {
+    width: 320px;
+    margin-left: -15px;
+  }
+  .search .btn {
+    margin-left: 80px;
   }
 }

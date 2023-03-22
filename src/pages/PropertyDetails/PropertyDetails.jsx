@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./PropertyDetails.css";
+//import Data.js
 import { propertiesData } from "../../components/Offers/Search/PropertyContext/Data";
+//import useParams
 import { useParams } from "react-router-dom";
+//import icons
 import { BiBed, BiBath, BiArea } from "react-icons/bi";
+//import styles
+import "./PropertyDetails.css";
 
 const PropertyDetails = () => {
   useEffect(() => {
@@ -71,25 +75,25 @@ const PropertyDetails = () => {
   let backgroundColor = "";
 
   if (estate.type === "House & Apartment") {
-    backgroundColor = "#0de6fc";
+    backgroundColor = "var(--mainColor)";
   } else if (estate.type === "Office") {
-    backgroundColor = "#e61787";
+    backgroundColor = "var(--altColor)";
   } else if (estate.type === "Vacant Land") {
-    backgroundColor = "#3ae055";
+    backgroundColor = "var(--thirdColor)";
   }
   return (
     <section className="property_details fade-bottom">
       <div className="container">
         <div className="offer_data">
           <div>
-            <h2 style={{ fontSize: "1.5rem", color: "var(--firstColor)" }}>
+            <h2 style={{ fontSize: "1.5rem", color: "var(--headerColor)" }}>
               {estate.name}
             </h2>
             <h3
               style={{
                 fontSize: "var(--SmallFontSize",
                 marginBottom: "1rem",
-                color: "var(--seventhColor)",
+                color: "var(--altSecondColor)",
               }}
             >
               {estate.address}

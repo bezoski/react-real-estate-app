@@ -1,8 +1,13 @@
 import React, { useContext } from "react";
+//import PropertyContext
 import { PropertyContext } from "../Search/PropertyContext/PropertyContext";
+//import Property
 import Property from "../Property/Property";
+//import link
 import { Link } from "react-router-dom";
+//import icon
 import { ImSpinner2 } from "react-icons/im";
+//import styles
 import "./PropertyList.css";
 
 const PropertyList = () => {
@@ -25,7 +30,14 @@ const PropertyList = () => {
         <div className="offer ">
           {realEstate.map((estate, index) => {
             return (
-              <Link to={`/property/${estate.id}`} className="link" key={index}>
+              <Link
+                to={`/property/${estate.id}`}
+                className="link"
+                onClick={() => {
+                  window.scrollTo({ top: 0 });
+                }}
+                key={index}
+              >
                 <Property property={estate} />
               </Link>
             );

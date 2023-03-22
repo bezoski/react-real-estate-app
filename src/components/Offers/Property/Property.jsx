@@ -1,6 +1,8 @@
 import React from "react";
-import "./Property.css";
+//import icons
 import { BiBed, BiBath, BiArea } from "react-icons/bi";
+//import styles
+import "./Property.css";
 const Property = ({ property }) => {
   const {
     image,
@@ -17,14 +19,14 @@ const Property = ({ property }) => {
   let backgroundColor = "";
 
   if (type === "House & Apartment") {
-    backgroundColor = "#0de6fc";
+    backgroundColor = "var(--mainColor)";
   } else if (type === "Office") {
-    backgroundColor = "#e61787";
+    backgroundColor = "var(--altColor)";
   } else if (type === "Vacant Land") {
-    backgroundColor = "#3ae055";
+    backgroundColor = "var(--thirdColor)";
   }
   return (
-    <div className="offers-content ">
+    <div className="offers-content fade-bottom ">
       <img className="offers-image" src={image} alt="" />
       <div className="element ">
         <div style={{ backgroundColor }} className="type">
@@ -63,7 +65,7 @@ const Property = ({ property }) => {
       </div>
       <div
         style={{
-          color: "var(--firstColor)",
+          color: "var(--headerColor)",
           marginLeft: "15px",
           fontSize: "var(--SmallFontSize)",
         }}

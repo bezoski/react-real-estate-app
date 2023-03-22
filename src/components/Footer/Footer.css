@@ -35,6 +35,18 @@
   color: #ffffff;
 }
 
+.footer .note {
+  margin-top: 0.5rem;
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer .note a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 @media (max-width: 480px) {
   .footer {
     height: auto;

@@ -1,12 +1,12 @@
 .star_rating {
-  width: var(--contentWidth);
+  max-width: var(--contentWidth);
   margin: 90px 100px 0 100px;
   height: 800px;
 }
 
 .star_rating h1 {
   font-size: var(--SemiBigFontSize);
-  color: var(--firstColor);
+  color: var(--headerColor);
   text-align: center;
   margin-top: 50px auto;
   position: relative;
@@ -17,7 +17,7 @@
   display: block;
   width: 700px;
   height: 2px;
-  background: var(--firstColor);
+  background: var(--headerColor);
   position: absolute;
   left: 0;
   top: 50%;
@@ -29,7 +29,7 @@
   display: block;
   width: 700px;
   height: 2px;
-  background: var(--firstColor);
+  background: var(--headerColor);
   position: absolute;
   right: 0;
   top: 50%;
@@ -38,7 +38,7 @@
 
 .star_rating p {
   font-size: var(--SmallFontSize);
-  color: var(--seventhColor);
+  color: var(--altSecondColor);
   text-align: center;
   margin-top: 5px;
 }
@@ -67,13 +67,14 @@
 .star {
   width: 90px;
   height: 90px;
-  color: var(--seventhColor);
+  color: var(--altSecondColor);
   opacity: 50%;
 }
 
 .star-hover {
   color: orange;
   width: 90px;
+  cursor: pointer;
   height: 90px;
 }
 
@@ -83,8 +84,8 @@
   height: 55px;
   border-radius: 30px;
   border: 0px;
-  background: linear-gradient(0.2turn, var(--firstColor), var(--fourthColor));
-  color: var(--secondColor);
+  background: linear-gradient(0.2turn, var(--headerColor), var(--thirdColor));
+  color: var(--mainColor);
   font-size: var(--MediumFontSize);
   text-decoration: none;
   cursor: pointer;
@@ -92,6 +93,96 @@
 
 .rating .btn:hover {
   color: #ffffff;
-  box-shadow: 10px -5px 20px 0 var(--fourthColor),
-    -10px 1px 20px 0 var(--secondColor);
+  box-shadow: 10px -5px 20px 0 var(--thirdColor),
+    -10px 1px 20px 0 var(--mainColor);
+}
+
+@media screen and (max-width: 1024px) {
+  .star_rating {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .star_rating h1 {
+    font-size: var(--SemiBigFontSize);
+    color: var(--headerColor);
+    text-align: center;
+    margin-top: 50px auto;
+    position: relative;
+  }
+
+  .star_rating h1::before,
+  .star_rating h1::after {
+    content: "";
+    visibility: hidden;
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .stars {
+    width: 500px;
+  }
+
+  .star {
+    width: 75px;
+    height: 75px;
+  }
+
+  .star-hover {
+    width: 75px;
+    height: 75px;
+  }
+  .star_rating h1 {
+    font-size: var(--MediumFontSize);
+  }
+
+  .star_rating p {
+    font-size: var(--SmallFontSize);
+    margin-bottom: -17%;
+  }
+
+  .rating textarea {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stars {
+    width: 400px;
+  }
+
+  .star {
+    width: 60px;
+    height: 60px;
+  }
+
+  .star-hover {
+    width: 60px;
+    height: 60px;
+  }
+
+  .star_rating p {
+    margin-bottom: -40%;
+  }
+
+  .rating textarea {
+    width: 350px;
+    height: 200px;
+  }
+
+  .rating .btn {
+    margin-top: -5%;
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .rating textarea {
+    width: 290px;
+    height: 150px;
+  }
 }

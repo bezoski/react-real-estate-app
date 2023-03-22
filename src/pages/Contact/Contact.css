@@ -9,7 +9,7 @@
 .header {
   text-align: center;
   font-size: var(--SemiBigFontSize);
-  color: var(--firstColor);
+  color: var(--headerColor);
 }
 
 .forms {
@@ -36,7 +36,7 @@
   outline: none;
   min-width: 300px;
   width: 540px;
-  background-color: #f2f2f2;
+  background: #f2f2f2;
   border-radius: 10px;
   border: 1px solid black;
 }
@@ -59,7 +59,7 @@
   height: 55px;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(0.1turn, var(--firstColor), var(--fourthColor));
+  background: linear-gradient(0.1turn, var(--headerColor), var(--thirdColor));
   font-size: var(--MediumFontSize);
   text-decoration: none;
   color: #fff;
@@ -67,9 +67,9 @@
 }
 
 .forms-btn:hover {
-  color: var(--secondColor);
-  box-shadow: 10px -5px 20px 0 var(--fourthColor),
-    -10px 1px 20px 0 var(--secondColor);
+  color: var(--mainColor);
+  box-shadow: 10px -5px 20px 0 var(--thirdColor),
+    -10px 1px 20px 0 var(--mainColor);
 }
 
 #value {
@@ -106,5 +106,14 @@
     width: auto;
     height: auto;
     font-size: var(--SemiMediumFontSize);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .message,
+  .name,
+  .email {
+    width: 200px;
+    margin-left: -100px;
   }
 }

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+//import NavLink
 import { NavLink } from "react-router-dom";
+//import image
 import Logo from "../../assets/react-estate-app-logo.png";
+//import styles
 import "./Navbar.css";
 
 class Navbar extends Component {

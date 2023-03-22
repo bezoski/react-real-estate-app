@@ -1,11 +1,14 @@
 import React from "react";
+//import styles
 import "./Offers.css";
 
 const Offers = () => {
   return (
     <section className="offers fade-bottom">
-      <h1>Offers</h1>
-      <p>What we offer</p>
+      <div className="offers-desc">
+        <h1>Offers</h1>
+        <p>What we offer</p>
+      </div>
       <div className="box-container">
         <div className="box box1">
           <div className="content">

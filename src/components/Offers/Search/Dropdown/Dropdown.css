@@ -20,12 +20,12 @@
 
 .dropdown-icon-primary {
   font-size: 2rem;
-  color: var(--firstColor);
+  color: var(--headerColor);
 }
 
 .dropdown-icon-secondary {
   font-size: 2rem;
-  color: var(--firstColor);
+  color: var(--headerColor);
   margin-left: auto;
 }
 
@@ -54,12 +54,12 @@
 }
 
 .menu-section .dropdown-btn .content span {
-  color: var(--thirdColor);
+  color: var(--secondColor);
   font-size: var(--SmallFontSize);
 }
 
 .menu-section .dropdown-btn .content .description {
-  color: var(--seventhColor);
+  color: var(--altSecondColor);
   font-size: 1rem;
 }
 
@@ -68,5 +68,19 @@
 }
 
 .menu:hover {
-  color: var(--firstColor);
+  color: var(--headerColor);
+}
+
+@media screen and (max-width: 480px) {
+  .dropdown-btn {
+    width: 320px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .dropdown-btn {
+    width: 290px;
+    margin-left: -10px;
+  }
 }

@@ -1,14 +1,16 @@
 .offers {
-  width: var(--contentWidth);
+  max-width: var(--contentWidth);
+  min-width: 320px;
   height: 850px;
-  margin: 45px 100px 0 100px; /*45px auto 0 auto*/
+  margin: 45px 100px 0 100px;
   display: flex;
   flex-direction: column;
 }
 
 .offers h1 {
+  width: var(--contentWidth);
   font-size: var(--SemiBigFontSize);
-  color: var(--firstColor);
+  color: var(--headerColor);
   text-align: center;
   position: relative;
   margin-top: 0;
@@ -19,7 +21,7 @@
   display: block;
   width: 700px;
   height: 2px;
-  background: var(--firstColor);
+  background: var(--headerColor);
   position: absolute;
   left: 0;
   top: 50%;
@@ -31,7 +33,7 @@
   display: block;
   width: 700px;
   height: 2px;
-  background: var(--firstColor);
+  background: var(--headerColor);
   position: absolute;
   right: 0;
   top: 50%;
@@ -40,13 +42,14 @@
 
 .offers p {
   font-size: var(--SmallFontSize);
-  color: var(--seventhColor);
+  color: var(--altSecondColor);
   text-align: center;
   margin-top: 5px;
+  width: var(--contentWidth);
 }
 
 .box-container {
-  width: 100%;
+  width: var(--contentWidth);
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: center;
@@ -103,16 +106,101 @@
 }
 
 .box1 .content span {
-  color: var(--firstColor);
+  color: var(--headerColor);
 }
 .box1 h2 {
   color: #ffffff;
 }
 
 .box2 h2 {
-  color: var(--fourthColor);
+  color: var(--thirdColor);
 }
 
 .box3 h2 {
-  color: var(--secondColor);
+  color: var(--mainColor);
+}
+
+@media screen and (max-width: 1024px) {
+  .offers {
+    max-width: 100%;
+    margin: 45px auto;
+    padding: 0 20px;
+  }
+
+  .offers h1 {
+    width: 100%;
+  }
+
+  .offers h1::before,
+  .offers h1::after {
+    content: "";
+    display: none;
+  }
+
+  .offers p {
+    width: 100%;
+  }
+
+  .box-container {
+    grid-template-columns: auto;
+  }
+
+  .box {
+    width: 400px;
+    height: 300px;
+    margin: 50px 0;
+    position: relative;
+  }
+
+  .offers {
+    max-width: 1024px;
+    min-width: 320px;
+    height: auto;
+    margin: 45px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .box-container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+  }
+
+  .box::before {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .offers {
+    margin: 45px auto 0 auto;
+  }
+  .box {
+    width: 350px;
+    height: 270px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .box {
+    width: 300px;
+    height: 200px;
+  }
+  .box::before {
+    width: 300px;
+    height: 200px;
+  }
+  .box1 .content h2,
+  .box2 .content h2,
+  .box3 .content h2 {
+    font-size: var(--MediumFontSize);
+  }
 }

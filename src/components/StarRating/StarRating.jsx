@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+//import icon
 import { FaStar } from "react-icons/fa";
+//import styles
 import "./StarRating.css";
 const StarRating = () => {
   const StarCount = 5;

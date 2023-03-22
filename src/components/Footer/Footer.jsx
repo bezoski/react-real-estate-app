@@ -1,5 +1,7 @@
 import React from "react";
+//import link
 import { Link } from "react-router-dom";
+//import styles
 import "./Footer.css";
 
 const Footer = () => {
@@ -61,6 +63,14 @@ const Footer = () => {
       >
         Back to top
       </p>
+      <div className="note">
+        Note: This website is only portfolio -{" "}
+        <i className="fa-brands fa-github" />
+        <a href="https://github.com/bezoski" rel="noreferrer" target="_blank">
+          {" "}
+          Github
+        </a>
+      </div>
     </section>
   );
 };

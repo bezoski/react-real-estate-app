@@ -2,18 +2,26 @@
 import House1 from "./../../../../assets/house1.png";
 import House2 from "./../../../../assets/house2.png";
 import House3 from "./../../../../assets/house3.png";
+import House4 from "./../../../../assets/house4.png";
+import House5 from "./../../../../assets/house5.png";
 //Apartments
 import Apartment1 from "./../../../../assets/apartment1.png";
 import Apartment2 from "./../../../../assets/apartment2.png";
 import Apartment3 from "./../../../../assets/apartment3.png";
+import Apartment4 from "./../../../../assets/apartment4.png";
+import Apartment5 from "./../../../../assets/apartment5.png";
 //Offices
 import Office1 from "./../../../../assets/office1.png";
 import Office2 from "./../../../../assets/office2.png";
 import Office3 from "./../../../../assets/office3.png";
+import Office4 from "./../../../../assets/office4.png";
+import Office5 from "./../../../../assets/office5.png";
 //Vacant Lands
 import VacantLand1 from "./../../../../assets/vacantland1.png";
 import VacantLand2 from "./../../../../assets/vacantland2.png";
 import VacantLand3 from "./../../../../assets/vacantland3.png";
+import VacantLand4 from "./../../../../assets/vacantland4.png";
+import VacantLand5 from "./../../../../assets/vacantland5.png";
 //Agents
 import Agent1 from "./../../../../assets/agent1.png";
 import Agent2 from "./../../../../assets/agent2.png";
@@ -250,6 +258,158 @@ export const propertiesData = [
     agent: {
       image: Agent7,
       name: "Marcin Kwiatkowski",
+    },
+  },
+  {
+    id: 13,
+    type: "House & Apartment",
+    name: "House 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
+    image: House4,
+    country: "Norway",
+    address: "LØrenskog, Trygves vei 84, 1473 ",
+    bedrooms: "3",
+    bathrooms: "2",
+    surface: "650 sq m",
+    price: "415000",
+    priceRent: "180000",
+    agent: {
+      image: Agent2,
+      name: "Michaela Meza",
+    },
+  },
+  {
+    id: 14,
+    type: "House & Apartment",
+    name: "Apartment 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
+    image: Apartment4,
+    country: "Italy",
+    address: "Torino, Via Enrico Fermi 110, 10021 ",
+    bedrooms: "1",
+    bathrooms: "1",
+    surface: "60 sq m",
+    price: "60000",
+    priceRent: "30000",
+    agent: {
+      image: Agent3,
+      name: "Asa Chambers",
+    },
+  },
+  {
+    id: 15,
+    type: "Office",
+    name: "Office 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
+    image: Office4,
+    country: "Norway",
+    address: "Oslo, Karen Platous vei 108, 0988 ",
+    bedrooms: "0",
+    bathrooms: "1",
+    surface: "75 sq m",
+    price: "55000",
+    priceRent: "20000",
+    agent: {
+      image: Agent5,
+      name: "Evelyn Valencia",
+    },
+  },
+  {
+    id: 16,
+    type: "Vacant Land",
+    name: "Vacant Land 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
+    image: VacantLand4,
+    country: "Norway",
+    address: "Stavanger, Eikebergveien 49, 4017 ",
+    bedrooms: "0",
+    bathrooms: "0",
+    surface: "400 sq m",
+    price: "130000",
+    priceRent: "Not applicable",
+    agent: {
+      image: Agent7,
+      name: "Marcin Kwiatkowski",
+    },
+  },
+  {
+    id: 17,
+    type: "House & Apartment",
+    name: "Apartment 5",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
+    image: Apartment5,
+    country: "Norway",
+    address: "Lillehammer, Morterudvegen 194, 2609 ",
+    bedrooms: "1",
+    bathrooms: "1",
+    surface: "70 sq m",
+    price: "80000",
+    priceRent: "34000",
+    agent: {
+      image: Agent2,
+      name: "Michaela Meza",
+    },
+  },
+  {
+    id: 18,
+    type: "House & Apartment",
+    name: "House 5",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
+    image: House5,
+    country: "Italy",
+    address: "San Possidonio, Via Giacinto Gigante 108, 41039 ",
+    bedrooms: "4",
+    bathrooms: "2",
+    surface: "910 sq m",
+    price: "395000",
+    priceRent: "118000",
+    agent: {
+      image: Agent3,
+      name: "Asa Chambers",
+    },
+  },
+  {
+    id: 19,
+    type: "Office",
+    name: "Office 5",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
+    image: Office5,
+    country: "Italy",
+    address: "Tessello, Via Partenope 140, 47020 ",
+    bedrooms: "0",
+    bathrooms: "1",
+    surface: "55 sq m",
+    price: "43000",
+    priceRent: "20000",
+    agent: {
+      image: Agent4,
+      name: "Jared Hickman",
+    },
+  },
+  {
+    id: 20,
+    type: "Vacant Land",
+    name: "Vacant Land 5",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
+    image: VacantLand5,
+    country: "Italy",
+    address: "Verona, Via Rocca de Baldi 140, 37137",
+    bedrooms: "0",
+    bathrooms: "0",
+    surface: "950 sq m",
+    price: "350000",
+    priceRent: "Not applicable",
+    agent: {
+      image: Agent6,
+      name: "Isabel Huber",
     },
   },
 ];

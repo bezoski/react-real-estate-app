@@ -16,20 +16,20 @@
   width: var(--contentWidth);
   height: 630px;
   border-top-left-radius: 150px 150px;
-  border-bottom-right-radius: 330px 330px;
+  border-bottom-right-radius: 335px 335px;
 }
 .welcome p {
   font-size: var(--SecondBigFontSize);
   text-transform: uppercase;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   float: right;
   margin: 15% 10%;
-  color: var(--thirdColor);
+  color: var(--secondColor);
 }
 
 #find {
-  color: var(--secondColor);
+  color: var(--mainColor);
   text-decoration: underline;
 }
 
@@ -43,8 +43,8 @@
   height: 50px;
   border-radius: 30px;
   border: 0px;
-  background: linear-gradient(0.2turn, var(--fourthColor), var(--firstColor));
-  color: var(--secondColor);
+  background: linear-gradient(0.7turn, var(--thirdColor), var(--headerColor));
+  color: var(--mainColor);
   font-size: 20px;
   text-decoration: none;
   cursor: pointer;
@@ -52,6 +52,39 @@
 
 .welcome .btn:hover {
   color: #ffffff;
-  box-shadow: 10px -5px 20px 0 var(--secondColor),
-    -10px 1px 20px 0 var(--fourthColor);
+  box-shadow: 10px -5px 20px 0 var(--mainColor),
+    -10px 1px 20px 0 var(--thirdColor);
+}
+
+@media screen and (max-width: 1024px) {
+  .welcome {
+    width: auto;
+    height: 400px;
+    margin: 20px 10px;
+  }
+
+  .welcome::before {
+    width: auto;
+  }
+
+  .welcome p {
+    font-size: var(--BigFontSize);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .welcome {
+    width: auto;
+    height: 220px;
+    margin: 20px 10px;
+    border-bottom-right-radius: 150px 150px;
+  }
+  .welcome .btn {
+    width: 135px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .welcome p {
+    font-size: var(--MediumFontSize);
+  }
 }

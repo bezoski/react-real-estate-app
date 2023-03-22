@@ -36,7 +36,7 @@
   padding-right: 1.5rem;
 }
 .element .country {
-  background-color: var(--fifthColor);
+  background-color: var(--additionalColor);
   border-radius: 30px;
   color: #fff;
   padding-left: 1.5rem;
@@ -52,20 +52,31 @@
 }
 
 .rent {
-  color: var(--seventhColor);
+  color: var(--altSecondColor);
   font-size: 0.8rem;
 }
 
 @media screen and (max-width: 1024px) {
+  .element {
+    font-size: var(--SemiSmallFontSize);
+  }
   .offers-content {
-    width: 430px;
+    width: 340px;
     height: 380px;
   }
   .offers-image {
-    width: 400px;
-    height: 220px;
+    width: 320px;
+    height: 165px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
+  .offers-content {
+    width: 300px;
+    height: 380px;
+  }
+  .offers-image {
+    width: 270px;
+    height: 145px;
+  }
 }

@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+//import image
 import AboutPhoto from "../../assets/about.jpg";
+//import styles
 import "./About.css";
 
 import { FcBusinessman, FcDam, FcConferenceCall } from "react-icons/fc";

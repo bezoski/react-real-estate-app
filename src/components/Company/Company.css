@@ -1,15 +1,18 @@
 .company {
-  width: var(--contentWidth);
+  max-width: var(--contentWidth);
   height: 620px;
-  margin: 90px 100px 0 100px;
+  margin: 90px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .company-container {
   margin-top: 20px;
+  width: 100%;
 }
 .company_img {
-  height: 580px;
-  object-fit: contain;
+  height: 560px;
+  max-width: 100%;
   border-radius: 1.8rem;
 }
 
@@ -23,13 +26,13 @@
   padding-right: 25px;
 }
 .company_info h1 {
-  font-size: var(--BigFontSize);
-  color: var(--firstColor);
+  font-size: var(--SemiBigFontSize);
+  color: var(--headerColor);
   padding-bottom: 3.2rem;
 }
 
 .company_info P {
-  font-size: var(--MediumFontSize);
+  font-size: var(--SemiMediumFontSize);
 }
 
 .company_info .btn {
@@ -38,8 +41,8 @@
   height: 55px;
   border-radius: 30px;
   border: 0px;
-  background: linear-gradient(0.2turn, var(--firstColor), var(--fourthColor));
-  color: var(--secondColor);
+  background: linear-gradient(0.2turn, var(--headerColor), var(--thirdColor));
+  color: var(--mainColor);
   font-size: var(--MediumFontSize);
   text-decoration: none;
   cursor: pointer;
@@ -47,6 +50,64 @@
 
 .company_info .btn:hover {
   color: #ffffff;
-  box-shadow: 10px -5px 20px 0 var(--fourthColor),
-    -10px 1px 20px 0 var(--secondColor);
+  box-shadow: 10px -5px 20px 0 var(--thirdColor),
+    -10px 1px 20px 0 var(--mainColor);
+}
+
+@media screen and (max-width: 1300px) {
+  .company {
+    height: 950px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .company_img {
+    border-radius: 1.8rem;
+  }
+  .company_element {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .company_info {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .company_info h1 {
+    font-size: var(--MediumFontSize);
+    padding-bottom: 3.2rem;
+  }
+
+  .company_info p {
+    font-size: var(--SemiMediumFontSize);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .company_info h1 {
+    font-size: var(--SemiMediumFontSize);
+  }
+
+  .company_info p {
+    font-size: var(--SmallFontSize);
+  }
+
+  .company_info .btn {
+    font-size: var(--SemiMediumFontSize);
+    width: 180px;
+    height: auto;
+    padding: 5px 0;
+  }
 }

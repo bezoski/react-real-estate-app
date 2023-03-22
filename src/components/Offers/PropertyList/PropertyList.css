@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .link {
   text-decoration: none;
 }
@@ -23,7 +24,7 @@
 
 .loading_message {
   text-align: center;
-  color: var(--seventhColor);
+  color: var(--altSecondColor);
   font-size: var(--MediumFontSize);
   margin-top: 100px;
   margin-bottom: 100px;
@@ -31,7 +32,7 @@
 
 .loading-icon {
   animation: spin 1s linear infinite;
-  color: var(--thirdColor);
+  color: var(--secondColor);
   font-size: var(--BigFontSize);
   margin-top: 100px;
   margin-bottom: 100px;
@@ -57,7 +58,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   .offer {
     grid-template-columns: repeat(1, 1fr);
   }

@@ -1,7 +1,10 @@
 import React from "react";
+//import link
 import { Link } from "react-router-dom";
-import "./Company.css";
+//import image
 import CompanyImg from "../../assets/company.jpg";
+//import styles
+import "./Company.css";
 
 const Company = () => {
   return (
