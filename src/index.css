@@ -34,15 +34,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(var(--headerColor), var(--fourthColor));
+  background: linear-gradient(var(--headerColor), var(--thirdColor));
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--secondColor);
+  background: var(--mainColor);
   border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--thirdColor);
+  background: var(--secondColor);
 }
 
 .fade-bottom {
