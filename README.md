@@ -1,10 +1,11 @@
 <h1 align="center">React Real Estate App</h1>
-> Website with real estate purchase and rental offers🏡
+Website with real estate purchase and rental offers🏡
 
 ### ✨ Link to [Website](https://welcomehomesite.netlify.app/)
 
 ## Technologies
-React.js
+Project is created with:
+* React.js
 
 ## Author
 
