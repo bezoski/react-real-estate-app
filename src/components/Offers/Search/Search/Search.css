@@ -1,5 +1,5 @@
 .search {
-  width: var(--contentWidth);
+  max-width: var(--contentWidth);
   padding: 8px 100px 8px 100px;
   margin: auto;
   flex-direction: row;
