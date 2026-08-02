@@ -1,14 +1,13 @@
 .offers {
   max-width: var(--contentWidth);
   min-width: 320px;
-  height: 850px;
   margin: 45px 100px 0 100px;
   display: flex;
   flex-direction: column;
 }
 
 .offers h1 {
-  width: var(--contentWidth);
+  max-width: var(--contentWidth);
   font-size: var(--SemiBigFontSize);
   color: var(--headerColor);
   text-align: center;
@@ -45,20 +44,24 @@
   color: var(--altSecondColor);
   text-align: center;
   margin-top: 5px;
-  width: var(--contentWidth);
+  max-width: var(--contentWidth);
 }
 
 .box-container {
-  width: var(--contentWidth);
+  max-width: var(--contentWidth);
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   justify-content: center;
+  justify-items: center;
+  gap: 60px;
+  margin: 50px 0;
 }
 
 .box {
-  width: 398px;
+  position: relative;
+  width: 100%;
+  max-width: 398px;
   height: 630px;
-  margin: 50px;
 }
 
 .box1 {
@@ -73,8 +76,8 @@
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0.1;
-  height: 630px;
-  width: 398px;
+  height: 100%;
+  width: 100%;
   border-radius: 40px;
 }
 
@@ -93,7 +96,8 @@
 }
 
 .content h2 {
-  font-size: var(--BigFontSize);
+  /* scales with the box so long labels never spill past the rounded edge */
+  font-size: clamp(1.6rem, 3.4vw, var(--BigFontSize));
   position: relative;
   z-index: 1;
   padding: 8px;
@@ -142,14 +146,13 @@
   }
 
   .box-container {
-    grid-template-columns: auto;
+    grid-template-columns: minmax(0, 400px);
+    gap: 50px;
   }
 
   .box {
-    width: 400px;
+    max-width: 400px;
     height: 300px;
-    margin: 50px 0;
-    position: relative;
   }
 
   .offers {
@@ -172,11 +175,6 @@
     position: absolute;
     bottom: 50px;
   }
-
-  .box::before {
-    width: 400px;
-    height: 300px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -184,22 +182,14 @@
     margin: 45px auto 0 auto;
   }
   .box {
-    width: 350px;
-    height: 270px;
-  }
-  .box::before {
-    width: 350px;
+    max-width: 350px;
     height: 270px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .box {
-    width: 300px;
-    height: 200px;
-  }
-  .box::before {
-    width: 300px;
+    max-width: 300px;
     height: 200px;
   }
   .box1 .content h2,

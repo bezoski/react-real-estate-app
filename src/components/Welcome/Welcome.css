@@ -1,5 +1,6 @@
 .welcome {
-  width: var(--contentWidth);
+  position: relative;
+  max-width: var(--contentWidth);
   height: 630px;
   margin: 40px 100px 0 100px;
   background-image: url(/./src/assets/welcome-background.jpg);
@@ -13,8 +14,8 @@
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0.25;
-  width: var(--contentWidth);
-  height: 630px;
+  width: 100%;
+  height: 100%;
   border-top-left-radius: 150px 150px;
   border-bottom-right-radius: 335px 335px;
 }
@@ -64,7 +65,7 @@
   }
 
   .welcome::before {
-    width: auto;
+    width: 100%;
   }
 
   .welcome p {
@@ -75,16 +76,21 @@
 @media screen and (max-width: 480px) {
   .welcome {
     width: auto;
-    height: 220px;
+    height: 260px;
     margin: 20px 10px;
     border-bottom-right-radius: 150px 150px;
   }
   .welcome .btn {
+    /* floating it here collided with the wrapped headline */
+    float: none;
+    display: inline-block;
+    margin-top: 10px;
     width: 135px;
     height: 30px;
     font-size: 15px;
   }
   .welcome p {
     font-size: var(--MediumFontSize);
+    margin: 10% 8%;
   }
 }
