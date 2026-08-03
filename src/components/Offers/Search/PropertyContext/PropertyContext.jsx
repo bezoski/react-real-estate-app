@@ -1,32 +1,26 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, createContext } from "react";
 //import Data.js
 import { propertiesData } from "./Data";
 
 export const PropertyContext = createContext();
+
+// derived from the full data set, not from the filtered results — otherwise the
+// dropdowns would only offer whatever the last search happened to return
+const countries = [
+  "Location (any)",
+  ...new Set(propertiesData.map((estate) => estate.country)),
+];
+const properties = [
+  "Property type (any)",
+  ...new Set(propertiesData.map((estate) => estate.type)),
+];
+
 const PropertyContextProvider = ({ children }) => {
   const [realEstate, setRealEstate] = useState(propertiesData); //houes, setHouses
   const [country, setCountry] = useState("Location (any)");
-  const [countries, setCountries] = useState([]);
   const [property, setProperty] = useState("Property type (any)");
-  const [properties, setProperties] = useState([]);
   const [price, setPrice] = useState("Price range (any)");
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const allCountries = realEstate.map((estate) => {
-      return estate.country;
-    });
-    const uniqueCountries = ["Location (any)", ...new Set(allCountries)];
-    setCountries(uniqueCountries);
-  }, []);
-
-  useEffect(() => {
-    const allProperties = realEstate.map((estate) => {
-      return estate.type;
-    });
-    const uniqueProperties = ["Property type (any)", ...new Set(allProperties)];
-    setProperties(uniqueProperties);
-  }, []);
 
   const handleClick = () => {
     setLoading(true);
@@ -39,58 +33,19 @@ const PropertyContextProvider = ({ children }) => {
 
     const newProperties = propertiesData.filter((estate) => {
       const propertyPrice = parseInt(estate.price);
+      // a filter left on "(any)" simply does not narrow anything down
+      const matchesCountry = isDefault(country) || estate.country === country;
+      const matchesProperty = isDefault(property) || estate.type === property;
+      const matchesPrice =
+        isDefault(price) ||
+        (propertyPrice >= minPrice && propertyPrice <= maxPrice);
 
-      if (
-        estate.country === country &&
-        estate.type === property &&
-        propertyPrice >= minPrice &&
-        propertyPrice <= maxPrice
-      ) {
-        return property;
-      }
-
-      if (isDefault(country) && isDefault(property) && isDefault(price)) {
-        return estate;
-      }
-
-      if (!isDefault(country) && isDefault(property) && isDefault(price)) {
-        return estate.country === country;
-      }
-
-      if (!isDefault(property) && isDefault(country) && isDefault(price)) {
-        return estate.type === property;
-      }
-
-      if (!isDefault(price) && isDefault(property) && isDefault(country)) {
-        if (propertyPrice >= minPrice && propertyPrice <= maxPrice) {
-          return estate;
-        }
-      }
-
-      if (!isDefault(country) && !isDefault(property) && isDefault(price)) {
-        return estate.country === country && estate.type === property;
-      }
-
-      if (!isDefault(country) && isDefault(property) && !isDefault(price)) {
-        if (propertyPrice >= minPrice && propertyPrice <= maxPrice) {
-          return estate.country === country;
-        }
-      }
-
-      if (isDefault(country) && !isDefault(property) && !isDefault(price)) {
-        if (propertyPrice >= minPrice && propertyPrice <= maxPrice) {
-          return estate.type === property;
-        }
-      }
+      return matchesCountry && matchesProperty && matchesPrice;
     });
 
     setTimeout(() => {
-      return (
-        newProperties.length < 1
-          ? setRealEstate([])
-          : setRealEstate(newProperties),
-        setLoading(false)
-      );
+      setRealEstate(newProperties);
+      setLoading(false);
     }, 1000);
   };
 

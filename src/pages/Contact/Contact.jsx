@@ -10,41 +10,32 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
-
-  const Clear = (value) => {
-    setName("");
-    setEmail("");
-    setMessage("");
-    document.getElementById("value").innerHTML = "Your message has been sent";
-  };
+  const [sent, setSent] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    let errors = {};
+    const nextErrors = {};
     if (!name.trim()) {
-      errors.name = "Please enter your name";
-      document.getElementById("value").innerHTML = errors.name;
+      nextErrors.name = "Please enter your name";
     }
     if (!email.trim()) {
-      errors.email = "Please enter your email";
-      document.getElementById("value").innerHTML = errors.email;
+      nextErrors.email = "Please enter your email";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors.email = "Please enter a valid email address";
-      document.getElementById("value").innerHTML = errors.email;
+      nextErrors.email = "Please enter a valid email address";
     }
     if (!message.trim()) {
-      errors.message = "Please enter your message";
-      document.getElementById("value").innerHTML = errors.message;
+      nextErrors.message = "Please enter your message";
     }
-    setErrors(errors);
+    setErrors(nextErrors);
 
-    if (Object.keys(errors).length === 0) {
-      console.log("Name:", name);
-      console.log("Email:", email);
-      console.log("Message:", message);
-      document.getElementById("value").innerHTML = "Your message has been sent";
-      Clear();
+    if (Object.keys(nextErrors).length === 0) {
+      setName("");
+      setEmail("");
+      setMessage("");
+      setSent(true);
+    } else {
+      setSent(false);
     }
   };
   return (
@@ -86,7 +77,11 @@ const Contact = () => {
             onChange={(event) => setMessage(event.target.value)}
           ></textarea>
         </div>
-        <p id="value"></p>
+        <p id="value" className={sent ? "form_sent" : undefined}>
+          {sent
+            ? "Your message has been sent"
+            : errors.name || errors.email || errors.message}
+        </p>
         <button className="forms-btn" type="submit">
           Send
         </button>
