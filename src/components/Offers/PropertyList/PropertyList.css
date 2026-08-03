@@ -14,13 +14,10 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.link {
-  text-decoration: none;
-}
-
 /* stretch each card to its row height so cards stay uniform once fluid */
 .offer .link {
   display: flex;
+  text-decoration: none;
 }
 
 .loading {

@@ -18,12 +18,11 @@ const Company = () => {
         <div className="company_info company_element">
           <h1>We Are The Best Real Estate Company</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            Five countries, one standard. Whether it is a first apartment in
+            Szczecin or an office floor in Hamburg, the same team runs the
+            search, the viewings and the paperwork, and tells you honestly when
+            a place is not worth your money. Over 5000 sold so far, and we still
+            remember which ones had the good kitchens.
           </p>
           <Link to="/about">
             <button className="btn">More Details</button>

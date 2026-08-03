@@ -55,7 +55,6 @@ const Contact = () => {
           <label htmlFor="name" id="name_label">
             Name
           </label>
-          <br />
           <input
             type="text"
             id="name"
@@ -68,7 +67,6 @@ const Contact = () => {
           <label htmlFor="email" id="email_label">
             Email
           </label>
-          <br />
           <input
             type="email"
             id="email"
@@ -81,7 +79,6 @@ const Contact = () => {
           <label htmlFor="message" id="message_label">
             Message
           </label>
-          <br />
           <textarea
             id="message"
             value={message}

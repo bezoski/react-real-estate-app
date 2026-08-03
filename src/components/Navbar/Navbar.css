@@ -20,18 +20,20 @@ nav {
   font-size: var(--SemiMediumFontSize);
 }
 
-.link {
+/* scoped to the nav: `.link` is also used by the footer and the offer cards,
+   and the underline below used to be drawn across a hovered offer card */
+#navbar .link {
   color: var(--secondColor);
   text-decoration: none;
 }
 
-.link:hover {
+#navbar .link:hover {
   color: #ffffff;
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
 
-.link:hover::after {
+#navbar .link:hover::after {
   content: "";
   width: 30%;
   height: 2px;
@@ -42,12 +44,12 @@ nav {
   left: 20px;
 }
 
-.link-active {
+#navbar .link-active {
   color: var(--mainColor);
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
-.link-active::after {
+#navbar .link-active::after {
   content: "";
   width: 30%;
   height: 2px;
