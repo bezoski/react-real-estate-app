@@ -1,8 +1,9 @@
 .banner {
   position: relative;
   max-width: var(--contentWidth);
+  width: calc(100% - 200px);
   height: 365px;
-  margin: 90px 100px 50px 100px;
+  margin: 90px auto 50px auto;
   background: url("/./src/assets/offers-baner.jpg");
   background-size: cover;
   background-position: 50% 55%;

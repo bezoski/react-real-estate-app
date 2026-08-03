@@ -1,7 +1,8 @@
 .offers {
   max-width: var(--contentWidth);
+  width: calc(100% - 200px);
   min-width: 320px;
-  margin: 45px 100px 0 100px;
+  margin: 45px auto 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -11,32 +12,20 @@
   font-size: var(--SemiBigFontSize);
   color: var(--headerColor);
   text-align: center;
-  position: relative;
   margin-top: 0;
+  /* rules flank the heading instead of running through it */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
-.offers h1::before {
-  content: "";
-  display: block;
-  width: 700px;
-  height: 2px;
-  background: var(--headerColor);
-  position: absolute;
-  left: 0;
-  top: 50%;
-  z-index: -2;
-}
-
+.offers h1::before,
 .offers h1::after {
   content: "";
-  display: block;
-  width: 700px;
+  flex: 1;
   height: 2px;
   background: var(--headerColor);
-  position: absolute;
-  right: 0;
-  top: 50%;
-  z-index: -2;
 }
 
 .offers p {
@@ -95,18 +84,19 @@
   background-size: cover;
 }
 
+/* pinned to the bottom of the box so the label sits put at any box width */
+.box-container .content {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+}
+
 .content h2 {
   /* scales with the box so long labels never spill past the rounded edge */
   font-size: clamp(1.6rem, 3.4vw, var(--BigFontSize));
   position: relative;
   z-index: 1;
   padding: 8px;
-  margin-top: 110%;
-}
-
-.box2 .content h2,
-.box3 .content h2 {
-  margin-top: 130%;
 }
 
 .box1 .content span {
@@ -127,6 +117,7 @@
 @media screen and (max-width: 1024px) {
   .offers {
     max-width: 100%;
+    width: auto;
     margin: 45px auto;
     padding: 0 20px;
   }
@@ -167,14 +158,6 @@
     overflow-x: hidden;
   }
 
-  .box-container .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 50px;
-  }
 }
 
 @media screen and (max-width: 480px) {

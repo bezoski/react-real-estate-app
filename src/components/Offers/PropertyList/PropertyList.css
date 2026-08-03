@@ -1,6 +1,7 @@
 .property_list {
   max-width: var(--contentWidth);
-  margin: 90px 100px 50px 100px;
+  width: calc(100% - 200px);
+  margin: 90px auto 50px auto;
   height: auto;
 }
 

@@ -1,6 +1,7 @@
 .company {
   max-width: var(--contentWidth);
-  height: 620px;
+  width: calc(100% - 200px);
+  height: auto;
   margin: 90px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -11,8 +12,10 @@
   width: 100%;
 }
 .company_img {
-  height: 560px;
-  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 864 / 560;
+  height: auto;
+  object-fit: cover;
   border-radius: 1.8rem;
 }
 
@@ -54,14 +57,9 @@
     -10px 1px 20px 0 var(--mainColor);
 }
 
-@media screen and (max-width: 1300px) {
-  .company {
-    height: 950px;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .company {
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;

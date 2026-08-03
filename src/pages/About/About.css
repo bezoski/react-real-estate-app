@@ -1,6 +1,7 @@
 .about {
   max-width: var(--contentWidth);
-  height: 600px;
+  width: calc(100% - 200px);
+  height: auto;
   margin: 60px auto;
 }
 

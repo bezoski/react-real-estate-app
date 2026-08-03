@@ -1,8 +1,10 @@
 .welcome {
   position: relative;
+  display: flow-root;
   max-width: var(--contentWidth);
+  width: calc(100% - 200px);
   height: 630px;
-  margin: 40px 100px 0 100px;
+  margin: 40px auto 0 auto;
   background-image: url(/./src/assets/welcome-background.jpg);
   background-size: cover;
   border-top-left-radius: 150px 150px;
@@ -10,7 +12,7 @@
 }
 
 .welcome::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0.25;
@@ -23,7 +25,6 @@
   font-size: var(--SecondBigFontSize);
   text-transform: uppercase;
   position: relative;
-  /* z-index: 1; */
   float: right;
   margin: 15% 10%;
   color: var(--secondColor);
@@ -53,7 +54,8 @@
 
 .welcome .btn:hover {
   color: #ffffff;
-  box-shadow: 10px -5px 20px 0 var(--mainColor),
+  box-shadow:
+    10px -5px 20px 0 var(--mainColor),
     -10px 1px 20px 0 var(--thirdColor);
 }
 
@@ -81,7 +83,6 @@
     border-bottom-right-radius: 150px 150px;
   }
   .welcome .btn {
-    /* floating it here collided with the wrapped headline */
     float: none;
     display: inline-block;
     margin-top: 10px;
