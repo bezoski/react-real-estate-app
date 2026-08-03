@@ -1,82 +1,76 @@
 import React, { Component } from "react";
 //import NavLink
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 //import image
 import Logo from "../../assets/react-estate-app-logo.png";
 //import styles
 import "./Navbar.css";
 
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/offers", label: "Offers" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact Us" },
+];
+
 class Navbar extends Component {
   state = { clicked: false };
 
-  handleClick = () => {
-    const navbar = document.getElementById("navbar");
-    navbar.classList.toggle("active");
-    this.setState({ clicked: !this.state.clicked });
+  toggleMenu = () => {
+    this.setState((state) => ({ clicked: !state.clicked }));
   };
 
+  closeMenu = () => {
+    this.setState({ clicked: false });
+  };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.clicked !== this.state.clicked) {
+      // keep the page behind the drawer from scrolling
+      document.body.style.overflow = this.state.clicked ? "hidden" : "";
+    }
+  }
+
+  componentWillUnmount() {
+    document.body.style.overflow = "";
+  }
+
   render() {
+    const { clicked } = this.state;
     return (
       <section className="fade-bottom">
         <nav>
           <div className="logo">
-            <a href="/">
+            <Link to="/" onClick={this.closeMenu}>
               <img src={Logo} alt="logo" />
-            </a>
+            </Link>
           </div>
-          <div>
-            <ul
-              id="navbar"
-              className={this.state.clicked ? "nav_active" : "navbar"}
-            >
-              <li>
+          <div
+            className={clicked ? "nav_backdrop is_open" : "nav_backdrop"}
+            onClick={this.closeMenu}
+          />
+          <ul id="navbar" className={clicked ? "navbar nav_active" : "navbar"}>
+            {links.map(({ to, label }) => (
+              <li key={to}>
                 <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    isActive ? "link-active" : "link"
-                  }
+                  to={to}
+                  onClick={this.closeMenu}
+                  className={({ isActive }) => (isActive ? "link-active" : "link")}
                 >
-                  Home
+                  {label}
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/offers"
-                  className={({ isActive }) =>
-                    isActive ? "link-active" : "link"
-                  }
-                >
-                  Offers
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    isActive ? "link-active" : "link"
-                  }
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive ? "link-active" : "link"
-                  }
-                >
-                  Contact Us
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-          <div id="mobile" onClick={this.handleClick}>
-            <i
-              id="bar"
-              className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
-            ></i>
-          </div>
+            ))}
+          </ul>
+          <button
+            id="mobile"
+            type="button"
+            onClick={this.toggleMenu}
+            aria-expanded={clicked}
+            aria-label={clicked ? "Close menu" : "Open menu"}
+          >
+            <i id="bar" className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
+          </button>
         </nav>
       </section>
     );

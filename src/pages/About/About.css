@@ -1,6 +1,6 @@
 .about {
   max-width: var(--contentWidth);
-  width: calc(100% - 200px);
+  width: calc(100% - 2 * var(--pageInset));
   height: auto;
   margin: 60px auto;
 }

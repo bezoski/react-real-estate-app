@@ -1,4 +1,6 @@
 import React from "react";
+//import link
+import { Link } from "react-router-dom";
 //import styles
 import "./Offers.css";
 
@@ -10,27 +12,54 @@ const Offers = () => {
         <p>What we offer</p>
       </div>
       <div className="box-container">
-        <div className="box box1">
+        <Link
+          to="/offers"
+          className="box box1"
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
+        >
           <div className="content">
             <h2>
               <span>House</span>
               <br />
               &Apartment
             </h2>
+            <p className="box_desc">
+              Family homes and city apartments, ready to move into.
+            </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="box box2">
+        <Link
+          to="/offers"
+          className="box box2"
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
+        >
           <div className="content">
             <h2>Office</h2>
+            <p className="box_desc">
+              Workspaces and commercial units for a growing team.
+            </p>
           </div>
-        </div>
+        </Link>
 
-        <div className="box box3">
+        <Link
+          to="/offers"
+          className="box box3"
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
+        >
           <div className="content">
             <h2>Vacant Land</h2>
+            <p className="box_desc">
+              Building plots and open land, waiting to be developed.
+            </p>
           </div>
-        </div>
+        </Link>
       </div>
     </section>
   );

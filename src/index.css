@@ -9,7 +9,9 @@
   --altColor: #e61787;
   --altSecondColor: #808080;
   --SharedLayoutColor: #1b2430;
-  --contentWidth: 108rem;
+  /* one knob for how wide/centered the page reads */
+  --contentWidth: 90rem;
+  --pageInset: 120px;
   --SecondBigFontSize: 4.5rem;
   --BigFontSize: 3.5rem;
   --SemiBigFontSize: 3rem;

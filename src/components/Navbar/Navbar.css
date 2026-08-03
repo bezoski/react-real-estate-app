@@ -65,53 +65,84 @@ nav {
 
 #mobile {
   display: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
 #mobile i {
   color: var(--secondColor);
 }
 
+/* backdrop only exists while the drawer is open */
+.nav_backdrop {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
-  .logo {
-    margin-left: -50px;
+  nav {
+    padding: 15px 20px;
   }
+
+  .logo img {
+    width: 140px;
+    height: auto;
+    margin-left: 0;
+  }
+
   #navbar {
-    display: none;
+    /* always laid out, slid off-screen — so it can animate both ways */
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
-    top: 135px;
-    z-index: 3;
-    right: -300px;
-    width: 40%;
-    height: 100vh;
-    background: var(--altSecondColor);
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease-in-out;
-    padding: 40px 0 0 10px;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    width: min(78vw, 300px);
+    height: 100dvh;
+    background: var(--SharedLayoutColor);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.35);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 100px 24px 24px 24px;
   }
 
   #navbar.nav_active {
-    right: 0px;
-    display: flex;
-    transition: 0.3s ease-in-out;
+    transform: translateX(0);
   }
+
   #navbar li {
     margin-bottom: 25px;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .nav_backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .nav_backdrop.is_open {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   #mobile {
     display: block;
+    position: relative;
+    z-index: 5;
   }
 
   #mobile i {
-    font-size: var(--SemiMediumFontSize);
+    font-size: var(--MediumFontSize);
     cursor: pointer;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .logo {
-    margin-left: -90px;
   }
 }

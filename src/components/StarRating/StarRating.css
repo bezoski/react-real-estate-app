@@ -1,6 +1,6 @@
 .star_rating {
   max-width: var(--contentWidth);
-  width: calc(100% - 200px);
+  width: calc(100% - 2 * var(--pageInset));
   margin: 90px auto 0 auto;
   height: auto;
   padding-bottom: 60px;

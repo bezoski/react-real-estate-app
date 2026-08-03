@@ -2,7 +2,7 @@
   position: relative;
   display: flow-root;
   max-width: var(--contentWidth);
-  width: calc(100% - 200px);
+  width: calc(100% - 2 * var(--pageInset));
   height: 630px;
   margin: 40px auto 0 auto;
   background-image: url(/./src/assets/welcome-background.jpg);
