@@ -7,8 +7,39 @@
   flex-wrap: wrap;
 }
 
+/* same section header treatment as Offers and Rating */
+.company-desc {
+  width: 100%;
+}
+
+.company-desc h1 {
+  font-size: var(--SemiBigFontSize);
+  color: var(--headerColor);
+  text-align: center;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.company-desc h1::before,
+.company-desc h1::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: var(--headerColor);
+}
+
+.company-desc p {
+  font-size: var(--SmallFontSize);
+  color: var(--altSecondColor);
+  text-align: center;
+  margin-top: 5px;
+}
+
 .company-container {
-  margin-top: 20px;
+  margin-top: 50px;
   width: 100%;
 }
 .company_img {
@@ -64,6 +95,15 @@
     flex-direction: column;
     align-items: center;
     height: auto;
+  }
+
+  .company-desc h1 {
+    font-size: var(--MediumFontSize);
+  }
+
+  .company-desc h1::before,
+  .company-desc h1::after {
+    display: none;
   }
 
   .company_img {

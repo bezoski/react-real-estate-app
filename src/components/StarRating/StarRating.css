@@ -96,6 +96,10 @@
     padding: 0 12px 40px 12px;
   }
 
+  .star_rating h1 {
+    font-size: var(--MediumFontSize);
+  }
+
   .star_rating h1::before,
   .star_rating h1::after {
     display: none;
@@ -115,9 +119,6 @@
   .star-hover {
     width: 75px;
     height: 75px;
-  }
-  .star_rating h1 {
-    font-size: var(--MediumFontSize);
   }
 
   .star_rating p {

@@ -171,6 +171,7 @@
 
   .offers h1 {
     width: 100%;
+    font-size: var(--MediumFontSize);
   }
 
   .offers h1::before,

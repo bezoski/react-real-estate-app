@@ -9,6 +9,10 @@ import "./Company.css";
 const Company = () => {
   return (
     <section className="company fade-bottom">
+      <div className="company-desc">
+        <h1>About</h1>
+        <p>Who we are</p>
+      </div>
       <div className="company-container">
         <img
           src={CompanyImg}
