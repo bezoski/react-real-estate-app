@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  # react-router 7 requires Node >= 20; older sites default to an older Node
+  NODE_VERSION = "22"
+
+# This is a client-side routed single page app: every unknown path has to be
+# answered with index.html so React Router can resolve it. Without this, a
+# refresh or a direct link to /offers or /property/1 hits Netlify's own 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
